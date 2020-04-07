@@ -1,4 +1,5 @@
 import { totalNumberDisplayed, mainBodyContainerId } from './config.json';
+import { findMultiples } from './utils/findMultiples';
 
 //This function appends the numbers 
 const appendNumbers = () => {
@@ -11,6 +12,7 @@ const appendNumbers = () => {
 
     number.setAttribute('numberId', i);
     number.classList.add("container__element");
+    number.onclick = findMultiples;
     number.innerHTML = i;
     numberContainer.appendChild(number);
   }
@@ -18,9 +20,7 @@ const appendNumbers = () => {
   document.getElementById(mainBodyContainerId).appendChild(numberContainer);
 };
 
-
 const app = () => {
-  console.log('hello!');
   appendNumbers();
 };
 
