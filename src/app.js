@@ -1,6 +1,25 @@
-// source goes here
-const app = function() {
-  console.log('hello from app!');
+import { totalNumberDisplayed, mainBodyContainerId } from './config.json';
+
+//This function appends the numbers 
+const appendNumbers = () => {
+  const numberContainer = document.createElement('div');
+
+  // Starting loop at 1
+  for (let i = 1; i <= totalNumberDisplayed; i++) {
+    const number = document.createElement('div');
+
+    number.setAttribute('numberId', i);
+    number.innerHTML = i;
+    numberContainer.appendChild(number);
+  }
+
+  document.getElementById(mainBodyContainerId).appendChild(numberContainer);
+};
+
+
+const app = () => {
+  console.log('hello!');
+  appendNumbers();
 };
 
 export default app;
