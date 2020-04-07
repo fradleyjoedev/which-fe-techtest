@@ -22,17 +22,18 @@ h1 {
   align-items: center;
   width: 100%;
   height: 120px;
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
 }
 
 .container__element:last-child {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000000;
 }
 
 .container__element--active {
-  background: blue;
+  color: #ffffff;
+  background: #3232ea;
 }
 
 /* Tablet devices */
