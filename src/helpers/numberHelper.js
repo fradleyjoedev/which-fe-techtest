@@ -19,7 +19,7 @@ export default class NumberHelper {
             const element = document.querySelector(`[numberid='${i}']`);
     
             if(element) {
-              element.classList.add("container__element--active");
+              element.classList.add('container__element--active');
             }
 
             this.activeMultiples = true;
@@ -35,14 +35,16 @@ export default class NumberHelper {
 
   // Remove all active elements selected
   removeMultipleNumbers() {
-    document.querySelectorAll('.container__element--active').forEach(el => el.classList.remove('container__element--active'));
+    document.querySelectorAll('.container__element--active')
+            .forEach(el => el.classList.remove('container__element--active'));
+    
     this.activeMultiples = false;
   }
 
   // Append numbers based on the amount defined in the config
   initNumbers(totalNumberDisplayed) {
     const numberContainer = document.createElement('div');
-    numberContainer.classList.add("container");
+    numberContainer.classList.add('container');
   
     // Starting loop at 1
     for (let i = 1; i <= totalNumberDisplayed; i++) {
