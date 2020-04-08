@@ -9,8 +9,22 @@ describe('App', () => {
     NumberHelper.mockClear();
   });
 
-  it('We can check if the consumer called the class constructor', () => {
+  it('Check that the NumberHelper has been called', () => {
     const app = new App();
     expect(NumberHelper).toHaveBeenCalledTimes(1);
+  });
+
+  it('Check if initNumbers was called a method on the class instance', () => {
+    expect(NumberHelper).not.toHaveBeenCalled();
+  
+    const application = new App();
+    expect(NumberHelper).toHaveBeenCalledTimes(1);
+
+    application.init();
+  
+    const mockNumberHelperInstance = NumberHelper.mock.instances[0];
+    const mockInitNumbers = mockNumberHelperInstance.initNumbers;
+
+    expect(mockInitNumbers).toHaveBeenCalledTimes(1);
   });
 });

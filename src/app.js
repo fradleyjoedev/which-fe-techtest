@@ -1,6 +1,6 @@
 import NumberHelper from './helpers/numberHelper';
 
-export default class app {
+export default class App {
   constructor() {
     this.numberHelper = new NumberHelper();
   }
