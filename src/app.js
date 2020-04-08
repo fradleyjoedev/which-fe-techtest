@@ -1,8 +1,11 @@
 import NumberHelper from './helpers/numberHelper';
 
-const app = () => {
-  const numberHelper = new NumberHelper;
-  numberHelper.initNumbers();
-};
+export default class app {
+  constructor() {
+    this.numberHelper = new NumberHelper();
+  }
 
-export default app;
+  init() {
+    this.numberHelper.initNumbers();
+  }
+}

@@ -1,7 +1,16 @@
-import app from '../src/app';
+import NumberHelper from '../src/helpers/numberHelper';
+import App from '../src/app';
 
-describe('app', function() {
-  it('does nothing', function() {
-    expect(true).toBe(true);
+jest.mock('../src/helpers/numberHelper');
+
+describe('App', () => {
+  beforeEach(() => {
+    // Clear all instances and calls to constructor and all methods:
+    NumberHelper.mockClear();
+  });
+
+  it('We can check if the consumer called the class constructor', () => {
+    const app = new App();
+    expect(NumberHelper).toHaveBeenCalledTimes(1);
   });
 });
