@@ -41,7 +41,7 @@ export default class NumberHelper {
   }
 
   // Append numbers based on the amount defined in the config
-  initNumbers() {
+  initNumbers(totalNumberDisplayed) {
     const numberContainer = document.createElement('div');
     numberContainer.classList.add("container");
   
@@ -50,7 +50,7 @@ export default class NumberHelper {
       const number = document.createElement('div');
   
       number.setAttribute('numberId', i);
-      number.classList.add("container__element");
+      number.classList.add('container__element');
       number.onclick = this.selectMultipleNumbers.bind(this);
       number.innerHTML = i;
       numberContainer.appendChild(number);

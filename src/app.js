@@ -1,4 +1,5 @@
 import NumberHelper from './helpers/numberHelper';
+import { totalNumberDisplayed } from './config/config.json';
 
 export default class App {
   constructor() {
@@ -6,6 +7,6 @@ export default class App {
   }
 
   init() {
-    this.numberHelper.initNumbers();
+    this.numberHelper.initNumbers(totalNumberDisplayed);
   }
 }
