@@ -47,7 +47,7 @@ export default class NumberHelper {
   
     // Starting loop at 1
     for (let i = 1; i <= totalNumberDisplayed; i++) {
-      const number = document.createElement('div');
+      const number = document.createElement('button');
   
       number.setAttribute('numberId', i);
       number.classList.add('container__element');
