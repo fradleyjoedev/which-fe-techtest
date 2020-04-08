@@ -1,4 +1,4 @@
-import { totalNumberDisplayed, mainBodyContainerId } from '../config/config.json';
+import { totalNumberDisplayed } from '../config/config.json';
 
 export default class NumberHelper {
   constructor() {
@@ -56,6 +56,6 @@ export default class NumberHelper {
       numberContainer.appendChild(number);
     }
   
-    document.getElementById(mainBodyContainerId).appendChild(numberContainer);
+    document.body.appendChild(numberContainer);
   };  
 }
