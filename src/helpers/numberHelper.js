@@ -26,8 +26,7 @@ export default class NumberHelper {
           }
         }
       } else {
-        // Proper error handling should be here.
-        console.log('Cannot find attribute for numberid');
+        throw new Error('Cannot find attribute for numberid');
       }
     } else {
       this.removeMultipleNumbers();
