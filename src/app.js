@@ -6,6 +6,7 @@ export default class App {
     this.numberHelper = new NumberHelper();
   }
 
+  // Initialise numbers displayed
   init() {
     this.numberHelper.initNumbers(totalNumberDisplayed);
   }
